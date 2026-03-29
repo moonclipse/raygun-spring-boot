@@ -18,8 +18,7 @@ build:
       - raygun-spring-boot-starter-example/build
 
 check:starter:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: test
   script:
     - >
@@ -36,8 +35,7 @@ check:starter:
       - raygun-spring-boot-starter/build/reports/jacoco/test/jacocoTestReport.xml
 
 check:starter:example:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: test
   script:
     - >
@@ -51,8 +49,7 @@ check:starter:example:
         - raygun-spring-boot-starter-example/build/test-results/test/TEST-*.xml
 
 check:starter:example:web:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: test
   script:
     - >
@@ -66,8 +63,7 @@ check:starter:example:web:
         - raygun-spring-boot-starter-example-web/build/test-results/test/TEST-*.xml
 
 check:starter:example:web-services:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: test
   script:
     - >
@@ -81,8 +77,7 @@ check:starter:example:web-services:
         - raygun-spring-boot-starter-example-web-services/build/test-results/test/TEST-*.xml
 
 visualize:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: deploy
   script: gradle raygun-spring-boot-starter:jacocoToCobertura
   needs: ["check:starter"]
@@ -128,8 +123,7 @@ pages:
       - public
 
 .publish:
-  extends:
-    - .pull-build-cache
+  extends: .pull-build-cache
   stage: deploy
 
 .snapshot:
