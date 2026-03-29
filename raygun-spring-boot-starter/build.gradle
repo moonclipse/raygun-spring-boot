@@ -29,7 +29,7 @@ java {
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.2.12'
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.3.13'
     }
 }
 
