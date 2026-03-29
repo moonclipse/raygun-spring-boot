@@ -26,6 +26,18 @@ java {
     withJavadocJar()
 }
 
+components.java.withVariantsFromConfiguration(
+    configurations.webMvcSupportRuntimeElements
+) {
+    skip()
+}
+
+components.java.withVariantsFromConfiguration(
+    configurations.webServicesSupportRuntimeElements
+) {
+    skip()
+}
+
 dependencyManagement {
     imports {
         mavenBom 'org.springframework.boot:spring-boot-dependencies:3.3.13'
