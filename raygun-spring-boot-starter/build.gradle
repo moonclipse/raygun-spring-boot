@@ -101,7 +101,7 @@ publishing {
                 name = 'Raygun Spring Boot Starter'
                 description = 'Spring Boot Starter for Raygun'
                 inceptionYear = '2022'
-                url = 'https://github.com/rayyos/raygun-spring-boot'
+                url = 'https://github.com/moonclipse/raygun-spring-boot'
                 packaging = 'jar'
                 licenses {
                     license {
@@ -124,13 +124,13 @@ publishing {
                     }
                 }
                 scm {
-                    connection ='scm:git:git://github.com:rayyos/raygun-spring-boot.git'
-                    developerConnection = 'scm:git:ssh://github.com:rayyos/raygun-spring-boot.git'
-                    url = 'https://github.com/rayyos/raygun-spring-boot'
+                    connection ='scm:git:https://github.com/moonclipse/raygun-spring-boot.git'
+                    developerConnection = 'scm:git:ssh:git@github.com:moonclipse/raygun-spring-boot.git'
+                    url = 'https://github.com/moonclipse/raygun-spring-boot'
                 }
                 issueManagement {
                     system = 'GitLab'
-                    url = 'https://github.com/rayyos/raygun-spring-boot/issues'
+                    url = 'https://github.com/moonclipse/raygun-spring-boot/issues'
                 }
             }
         }
