@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  check:
+  check-starter:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -16,3 +16,30 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - run: ./gradlew raygun-spring-boot-starter:check raygun-spring-boot-starter:jacocoTestReport
+  check-starter-example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: ./gradlew raygun-spring-boot-starter-example:check raygun-spring-boot-starter-example:jacocoTestReport
+  check-starter-example-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: ./gradlew raygun-spring-boot-starter-example-web:check raygun-spring-boot-starter-example-web:jacocoTestReport
+  check-starter-example-web-services:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: ./gradlew raygun-spring-boot-starter-example-web-services:check raygun-spring-boot-starter-example-web-services:jacocoTestReport
