@@ -7,6 +7,13 @@ plugins {
 }
 
 repositories {
+    maven {
+        name = 'mavenCentralSnapshots'
+        url = 'https://central.sonatype.com/repository/maven-snapshots/'
+        content {
+            includeGroup 'id.kalakian.boot'
+        }
+    }
     mavenCentral()
 }
 
