@@ -54,11 +54,11 @@ The Javadoc can be accessed in [javadoc.io](https://javadoc.io/doc/id.kalakian.b
 
 ## Compatibility
 
-This starter is built on Java 17 and Spring Boot version `3.0.x`.
+This starter is built on Java 17 and Spring Boot `3.3.x`.
 
-This starter should work with Spring Boot version `3.0.x` and above.
+This starter should work with Spring Boot `3.0.x`, `3.1.x`, `3.2.x`, `3.3.x` and above.
 
-This starter is not tested with Spring Boot version `4.x.x`.
+This starter is not tested with Spring Boot `4.x.x`.
 
 ## Integrations
 
