@@ -30,6 +30,7 @@ dependencies {
     implementation project(':raygun-spring-boot-starter-example')
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 spotless {
