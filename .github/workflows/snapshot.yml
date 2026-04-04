@@ -22,4 +22,4 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.ORG_GRADLE_PROJECT_signingInMemoryKeyPassword }}
           USERNAME: ${{ github.actor }}
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew raygun-spring-boot-starter:publishMavenPublicationToMavenCentralRepository
+        run: ./gradlew raygun-spring-boot-starter:publishToMavenCentral
