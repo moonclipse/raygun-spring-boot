@@ -25,14 +25,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Mock implementation of the {@link RaygunClient} for testing purposes.
+ * Mock implementation of the {@link RaygunClient} for testing purposes. This implementation stores
+ * all {@link RaygunMessage}s being sent.
  *
  * @author Raydhitya Yoseph
  */
 public class MockRaygunClient extends RaygunClient {
   private final List<RaygunMessage> raygunMessages;
 
-  public MockRaygunClient() {
+  /** Instantiate a new {@link MockRaygunClient}. */
+  protected MockRaygunClient() {
     super("apiKey");
     this.raygunMessages = new ArrayList<>();
   }
@@ -48,6 +50,9 @@ public class MockRaygunClient extends RaygunClient {
     return HttpURLConnection.HTTP_OK;
   }
 
+  /**
+   * @return the count of sent {@link RaygunMessage}.
+   */
   public int count() {
     return raygunMessages.size();
   }
