@@ -5,7 +5,7 @@ plugins {
     id 'jacoco'
     id 'net.razvan.jacoco-to-cobertura' version '1.2.0' //can only be applied after the java plugin
     id 'org.barfuin.gradle.jacocolog' version '3.1.0'
-    id 'com.vanniktech.maven.publish' version '0.30.0'
+    id 'com.vanniktech.maven.publish' version '0.32.0'
 }
 
 repositories {
