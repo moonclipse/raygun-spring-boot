@@ -90,7 +90,7 @@ javadoc {
 mavenPublishing {
     publishToMavenCentral()
     signAllPublications()
-    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.0.0-SNAPSHOT')
+    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.0.0')
     pom {
         name = 'Raygun Spring Boot Starter'
         description = 'Spring Boot Starter for Raygun'
