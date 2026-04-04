@@ -22,20 +22,6 @@ java {
     registerFeature('webServicesSupport') {
         usingSourceSet(sourceSets.main)
     }
-    withSourcesJar()
-    withJavadocJar()
-}
-
-components.java.withVariantsFromConfiguration(
-    configurations.webMvcSupportRuntimeElements
-) {
-    skip()
-}
-
-components.java.withVariantsFromConfiguration(
-    configurations.webServicesSupportRuntimeElements
-) {
-    skip()
 }
 
 dependencyManagement {
