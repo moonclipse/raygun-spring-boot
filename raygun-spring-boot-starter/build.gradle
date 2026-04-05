@@ -24,6 +24,13 @@ java {
     }
 }
 
+// Can be used for consuming dependencies, but can not be used for publishing publications
+// through maven central portal because com.vanniktech.maven.publish does not map resolved
+// dependencies into the resulting pom.
+// The main dependencies' version is set manually so that the generated maven pom contains
+// the version.
+// The test dependencies' version is not set manually so that the version is resolved from
+// the spring-boot-dependencies maven bom.
 dependencyManagement {
     imports {
         mavenBom 'org.springframework.boot:spring-boot-dependencies:3.3.13'
@@ -31,13 +38,13 @@ dependencyManagement {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-autoconfigure'
-    implementation 'org.springframework:spring-test'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.3.13'
+    implementation 'org.springframework:spring-test:6.1.21'
     implementation 'com.mindscapehq:core:3.0.0'
 
-    webMvcSupportImplementation 'org.springframework:spring-webmvc'
+    webMvcSupportImplementation 'org.springframework:spring-webmvc:6.1.21'
     webMvcSupportCompileOnly 'jakarta.servlet:jakarta.servlet-api'
-    webServicesSupportImplementation 'org.springframework.ws:spring-ws-core'
+    webServicesSupportImplementation 'org.springframework.ws:spring-ws-core:4.0.15'
 
     testImplementation 'org.springframework.boot:spring-boot-test-autoconfigure'
     testImplementation 'jakarta.servlet:jakarta.servlet-api'
