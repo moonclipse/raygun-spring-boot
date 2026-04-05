@@ -26,9 +26,9 @@ java {
 
 // Can be used for consuming dependencies, but can not be used for publishing publications
 // through maven central portal because com.vanniktech.maven.publish does not map resolved
-// dependencies into the resulting pom.
+// dependencies' version into the resulting maven pom.
 // The main dependencies' version is set manually so that the generated maven pom contains
-// the version.
+// the dependencies' version.
 // The test dependencies' version is not set manually so that the version is resolved from
 // the spring-boot-dependencies maven bom.
 dependencyManagement {
@@ -97,7 +97,7 @@ javadoc {
 mavenPublishing {
     publishToMavenCentral()
     signAllPublications()
-    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.0.0')
+    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.1.0')
     pom {
         name = 'Raygun Spring Boot Starter'
         description = 'Spring Boot Starter for Raygun'

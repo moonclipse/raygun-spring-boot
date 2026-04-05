@@ -17,7 +17,7 @@ Add the dependency in the implementation configuration.
 
 ```
 dependencies {
-    implementation 'id.kalakian.boot:raygun-spring-boot-starter:1.0.0'
+    implementation 'id.kalakian.boot:raygun-spring-boot-starter:1.1.0'
 }
 ```
 
