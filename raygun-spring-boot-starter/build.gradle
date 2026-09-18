@@ -1,5 +1,5 @@
 plugins {
-    id 'io.spring.dependency-management' version '1.1.0'
+    id 'io.spring.dependency-management' version '1.1.4'
     id 'com.diffplug.spotless' version '6.18.0'
     id 'java'
     id 'jacoco'
@@ -97,7 +97,7 @@ javadoc {
 mavenPublishing {
     publishToMavenCentral()
     signAllPublications()
-    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.1.0')
+    coordinates('id.kalakian.boot', 'raygun-spring-boot-starter', '1.2.0-SNAPSHOT')
     pom {
         name = 'Raygun Spring Boot Starter'
         description = 'Spring Boot Starter for Raygun'
