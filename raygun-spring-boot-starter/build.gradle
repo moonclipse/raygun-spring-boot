@@ -33,13 +33,13 @@ java {
 // the spring-boot-dependencies maven bom.
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.3.13'
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.4.13'
     }
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.3.13'
-    implementation 'org.springframework:spring-test:6.1.21'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.4.13'
+    implementation 'org.springframework:spring-test:6.2.15'
     implementation 'com.mindscapehq:core:3.0.0'
 
     webMvcSupportImplementation 'org.springframework:spring-webmvc:6.1.21'
