@@ -18,14 +18,15 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
-      - uses: actions/upload-artifact@v7
-        with:
-          path: |
-            raygun-spring-boot-starter/build
-            raygun-spring-boot-starter-example/build
       - run: |
           gradle raygun-spring-boot-starter:jar
           gradle raygun-spring-boot-starter-example:jar
+      - uses: actions/upload-artifact@v7
+        with:
+          overwrite: 'true'
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
   check-starter:
     needs: build
     runs-on: ubuntu-latest
