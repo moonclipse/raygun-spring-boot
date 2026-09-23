@@ -18,6 +18,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
+      - uses: actions/upload-artifact@v7
+        with:
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
       - run: |
           gradle raygun-spring-boot-starter:jar
           gradle raygun-spring-boot-starter-example:jar
@@ -33,6 +38,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
+      - uses: actions/download-artifact@v8
+        with:
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
       - run: gradle raygun-spring-boot-starter:check raygun-spring-boot-starter:jacocoTestReport
   check-starter-example:
     needs: build
@@ -46,6 +56,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
+      - uses: actions/download-artifact@v8
+        with:
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
       - run: gradle raygun-spring-boot-starter-example:check raygun-spring-boot-starter-example:jacocoTestReport
   check-starter-example-web:
     needs: build
@@ -59,6 +74,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
+      - uses: actions/download-artifact@v8
+        with:
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
       - run: gradle raygun-spring-boot-starter-example-web:check raygun-spring-boot-starter-example-web:jacocoTestReport
   check-starter-example-web-services:
     needs: build
@@ -72,4 +92,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.12.1'
+      - uses: actions/download-artifact@v8
+        with:
+          path: |
+            raygun-spring-boot-starter/build
+            raygun-spring-boot-starter-example/build
       - run: gradle raygun-spring-boot-starter-example-web-services:check raygun-spring-boot-starter-example-web-services:jacocoTestReport
