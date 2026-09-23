@@ -25,6 +25,7 @@ jobs:
         with:
           overwrite: 'true'
           path: |
+            .gradle
             raygun-spring-boot-starter/build
             raygun-spring-boot-starter-example/build
   check-starter:
